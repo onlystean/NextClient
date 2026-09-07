@@ -24,7 +24,7 @@ int DefaultUserInfo::GetLaunchGameCount()
 }
 
 void DefaultUserInfo::GetUpdateBranch(char* branch, int len) {
-    user_storage_->GetLocal("branch", branch, len, "main");
+    user_storage_->GetLocal("branch", branch, len, "dustx");
 }
 
 void DefaultUserInfo::SetUpdateBranch(const char* branch) {

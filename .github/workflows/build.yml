@@ -39,7 +39,7 @@ jobs:
         run: .\vcpkg\bootstrap-vcpkg.bat -disableMetrics
 
       - name: Configure
-        run: cmake --preset vs2022 "-DNEXTCLIENT_INSTALL_DIR=${{ github.workspace }}\install"
+        run: cmake --preset vs2022 "-DNEXTCLIENT_INSTALL_DIR=${{ github.workspace }}\install" "-DNEXT_LAUNCHER_ENABLE_UPDATER=OFF"
 
       - name: Build
         run: cmake --build --preset vs2022-release --target BUILD_ALL
